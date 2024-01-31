@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  
   return (
     <div className="bg-white p-8 mr-60 ml-60 shadow-md rounded-md">
     <div className="flex items-center justify-between mb-20">

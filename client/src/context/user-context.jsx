@@ -34,7 +34,8 @@ const UserProvider = ({ children }) => {
     };
 
     try {
-      const { data } = await axios.post(`${baseUrl}/user/login`, body);
+      // const { data } = await axios.post(`${baseUrl}/login`, body);
+      const { data } = await axios.post(`${baseUrl}/user/login`, body)
       localStorage.setItem("user", JSON.stringify(data));
       setUser(data);
       navigate("/");
@@ -45,17 +46,13 @@ const UserProvider = ({ children }) => {
 
   const registerHandler = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append('name', e.target.name.value);
-    formData.append('email', e.target.email.value);
-    formData.append('password', e.target.password.value);
-    // formData.append('profile-pic', e.target['profile-image'].files[0]);
+
     try {
-      const response = await axios.post(`${baseUrl}/user/register`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
+      const response = await axios.post(`${baseUrl}/user/register`,  {
+    username: e.target.username.value,
+    email: e.target.email.value,
+    password: e.target.password.value
+});
       console.log(response.data);
       navigate('/login');
     } catch (err) {

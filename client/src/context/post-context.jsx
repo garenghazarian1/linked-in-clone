@@ -16,7 +16,8 @@ const PostProvider = ({ children }) => {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const response = await axios.get(`${baseUrl}/post`);
+        const response = await axios.get(`${baseUrl}/post`)
+        // const response = await axios.get(`${baseUrl}/`);
         setPosts(response.data);
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -69,21 +70,3 @@ const PostProvider = ({ children }) => {
 };
 
 export default PostProvider;
-
-// const createPostHandler = async (postTitle, postContent, postImage) => {
-//     const body = new FormData();
-//     body.append("title", postTitle);
-//     body.append("author", user._id);
-//     body.append("content", postContent);
-//     body.append("post-image", postImage);
-  
-//     try {
-//       const { data: newPost } = await axios.post(`${baseUrl}/post/create`, body);
-//       newPost.comments = [];
-//       setPosts((prevPosts) => [...prevPosts, newPost]);
-//       navigate("/");
-//     } catch (error) {
-//       console.error("Error creating post:", error);
-//     }
-//   };   this chunk is served as a possibility
-  

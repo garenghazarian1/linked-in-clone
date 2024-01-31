@@ -3,6 +3,7 @@ import User from "../models/UserModel.js";
 //REGISTER FUNCTION*****************
 export const handleRegister = async (req, res) => {
     try {
+        console.log(req.body)
         const user = new User(req.body)
         await user.save();
         res.status(201).send({success: true, user})
