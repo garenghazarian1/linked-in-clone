@@ -82,13 +82,14 @@ const PostComponent = () => {
             />
 
             <div className="flex justify-between m-2">
-            <label htmlFor="file-upload" className="cursor-pointer">
+            <label htmlFor="post-image" className="cursor-pointer">
               <FontAwesomeIcon icon={faImage} className="mr-2 text-gray-500" />
             </label>
             <input
               type="file"
-              id="file-upload"
+              id="post-image"
               className="hidden"
+              name="post-image"
               onChange={handleImageUpload}
             />
             <button

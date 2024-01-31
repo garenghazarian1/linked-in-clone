@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <div className="bg-white p-8 mr-60 ml-60">
+    <div className="bg-white p-8 mr-60 ml-60 shadow-md rounded-md">
     <div className="flex items-center justify-between mb-20">
       <div className="flex items-center">
       <h3 className="text-[30px] font-bold text-[#0077b7] mr-1">Linked</h3>

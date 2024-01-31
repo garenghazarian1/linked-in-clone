@@ -105,7 +105,7 @@ export default function Register() {
 
                 <p className="text-center">
                   Already on LinkedIn?{' '}
-                  <Link to="/" className="text-blue-600 font-bold">
+                  <Link to="/login" className="text-blue-600 font-bold">
                     Sign in
                   </Link>
                 </p>

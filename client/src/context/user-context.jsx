@@ -49,7 +49,7 @@ const UserProvider = ({ children }) => {
     formData.append('name', e.target.name.value);
     formData.append('email', e.target.email.value);
     formData.append('password', e.target.password.value);
-    formData.append('profile-pic', e.target['profile-image'].files[0]);
+    // formData.append('profile-pic', e.target['profile-image'].files[0]);
     try {
       const response = await axios.post(`${baseUrl}/user/register`, formData, {
         headers: {
