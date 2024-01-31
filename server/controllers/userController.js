@@ -12,6 +12,7 @@ export const handleRegister = async (req, res) => {
     }
 }
 
+//LOGIN FUNCTION*****************
 
 export const handleLogin = async (req, res) => {
     try {
@@ -30,4 +31,21 @@ export const handleLogin = async (req, res) => {
         console.log("error in login", error.message);
         res.status(500).send({ success: false, error: error.message });
     }
+}
+
+//GET ALL USERS FUNCTION*****************
+
+export const handlegetusers = async (req, res) =>{
+        try{
+            const users = await User.find()
+            res.json({success: true, users})
+        } catch (error) {
+            console.error("Error getting all users:", error.message);
+            res.status(500).json({ success: false, error: error.message });
+        }
+
+
+
+    
+
 }

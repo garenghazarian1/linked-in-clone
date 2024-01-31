@@ -7,7 +7,7 @@ const postSchema = new Schema({
     author: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
     content: {type: String,  trim: true},     
     image: {type: String, }, 
-    imagePublicId: { type: String },  
+    imagePublicId: { type: String },  // dear tyhe Field to store Cloudinary image public ID
 },
 
       
