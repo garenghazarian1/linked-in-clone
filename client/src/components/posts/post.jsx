@@ -3,11 +3,15 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 
+import { usePostContext } from '../../context/post-context';
+
 const PostComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [postContent, setPostContent] = useState('');
   const [postTitle, setPostTitle] = useState('');
   const [postImage, setPostImage] = useState('');
+
+  const { createPostHandler } = usePostContext(); 
 
   const handlePostClick = () => {
     setIsModalOpen(true);
@@ -18,6 +22,7 @@ const PostComponent = () => {
   };
 
   const handlePostSubmit = () => {
+    createPostHandler(postTitle, postContent, postImage);
     // Handle post submission logic here
     console.log('Post Submitted:', { postTitle, postContent, postImage });
     setPostTitle('');
