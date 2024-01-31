@@ -14,7 +14,7 @@ cloudinaryV2.config({
 const storage = new CloudinaryStorage({
     cloudinary: cloudinaryV2,
     params: {
-      folder: "to-do-list-mern",
+      folder: "linked-in",
       format: async (req, file) => {
         console.log("🚀 ~ format: ~ file:", file)
         
