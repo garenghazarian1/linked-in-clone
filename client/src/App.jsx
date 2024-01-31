@@ -1,25 +1,25 @@
-import './App.css'
-import LeftBar from './components/LeftBar';
-import Navbar from './components/Navbar';
-import RightBar from './components/RightBar';
-import HomePage from './pages/HomePage';
-import ProfilePage from './pages/ProfilePage';
-import { BrowserRouter as Router,  Route } from'react-router-dom';
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Homepage from "./pages/HomePage";
+import NetworkPage from "./pages/NetworkPage";
+import Navbar from "./components/Navbar";
+import PageNotFound from "./pages/NotFoundPage";
 
-
-function App() {
+export default function App() {
 
   return (
-    <>
+    <> 
     <Navbar />
-    <LeftBar />
-    <RightBar />
-    <ProfilePage />
-    <HomePage/>
-     
-    
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/networkPage" element={<NetworkPage />} />
+
+      {/* When page not found */}
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
     </>
   )
 }
-
-export default App

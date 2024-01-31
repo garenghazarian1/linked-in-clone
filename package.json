@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@mui/icons-material": "^5.15.6",
+    "@mui/material": "^5.15.6",
+    "lucide-react": "^0.320.0",
+    "react-router-dom": "^6.21.3"
+  }
+}
