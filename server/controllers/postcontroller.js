@@ -1,5 +1,5 @@
 import Post from "../models/PostModel.js"
-import fs from "fs";
+
 
 
 // GET ALL POSTS ****************
