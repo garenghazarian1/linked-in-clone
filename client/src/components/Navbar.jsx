@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return (
-      <div className='bg-white py-2 px-4 flex items-center justify-evenly gap-15 shadow p-4'>
+      <div className='bg-white py-2 px-4 flex items-center justify-evenly gap-15 shadow p-4 '>
         {/* Left side of the Navbar */}
         <div className='flex items-center'>
           <span className='text-blue-800 text-xl font-bold'><img src="/assets/2.png" alt="" className="w-14 h-14 mr-2" /></span>
@@ -44,12 +44,17 @@ export default function Navbar() {
     </div>
     <div className='flex flex-col items-center'>
       <img
-        src='/path/to/your/profile/image.jpg'
+        src='https://images.unsplash.com/photo-1531727991582-cfd25ce79613?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         alt='Profile'
         className='w-7 h-7 rounded-full cursor-pointer'
       />
-      <span className='text-xs mt-1'>Me</span>
+   
+   <span className='text-xs mt-1'>Me</span> 
+            
+     
     </div>
+   
+  
   </div>
 </div>
 </div>
