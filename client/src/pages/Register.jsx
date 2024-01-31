@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { useUserContext } from "../context/user-context";
+
 export default function Register() {
+  const { registerHandler } = useUserContext();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
@@ -26,6 +30,7 @@ export default function Register() {
     setPassword('');
     setUsername('');
     setShowErrorMessage(false);
+    registerHandler(e)
   };
 
   return (
