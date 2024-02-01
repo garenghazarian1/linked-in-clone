@@ -46,7 +46,7 @@ const UserProvider = ({ children }) => {
   const registerHandler = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(${baseUrl}/user/register,  {
+      const response = await axios.post(`${baseUrl}/user/register`,  {
     username: e.target.name.value,
     email: e.target.email.value,
     password: e.target.password.value

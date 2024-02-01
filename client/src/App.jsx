@@ -5,6 +5,7 @@ import Homepage from "./pages/HomePage";
 import NetworkPage from "./pages/NetworkPage";
 import Navbar from "./components/Navbar";
 import PageNotFound from "./pages/NotFoundPage";
+import ProfilePage from "./pages/ProfilePage";
 
 export default function App() {
 
@@ -16,6 +17,8 @@ export default function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/networkPage" element={<NetworkPage />} />
+      <Route path="profile" element={<ProfilePage />} />
+
 
       {/* When page not found */}
       <Route path="*" element={<PageNotFound />} />
